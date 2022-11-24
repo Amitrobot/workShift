@@ -1,0 +1,134 @@
+.container{
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+.shifts{
+  width: 100%;
+  background-color: #fff;
+}
+.shift-tabs{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.shift-tabs h4 {
+  margin-right: 10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.shift-tabs h4:first-child{
+  color: #3CA1FE;
+}
+.shift-tabs h4:nth-child(2){
+  color: #F7AD43;
+}
+.shift-tabs h4:last-child{
+  color: #F57622;
+}
+
+.mid{
+  background-color: #3CA1FE;
+}
+.day{
+  background-color: #F7AD43;
+}
+.eve{
+  background-color: #F57622;
+}
+.mid_border{
+  border:1px solid #3CA1FE
+}
+.day_border{
+  border:1px solid #F7AD43
+}
+.eve_border{
+  border:1px solid #F57622
+}
+.shft-board{
+  width: 100%;
+  display: flex;
+}
+.board-title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #E4E4E4;
+  padding: 10px;
+}
+.board-title h4{
+  margin-right: 10px;
+  color: #3CA1FE;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.work-list{
+  background-color: #fff;
+  padding: 10px 10px 10px 0px ;
+  display: flex;
+  gap: 10px;
+}
+.work-list .example-list{
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  min-height: 10px;
+}
+.work-list .example-list .example-box{
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+  -webkit-box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+  -moz-box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+}
+.card{
+  display: flex;
+}
+.card .card-time{
+  font-size: 12px;
+  margin-right:10px;
+}
+.card .card-time-zone{
+  font-size: 12px;
+  margin-right:10px;
+}
+.card .card-time p{
+  margin-bottom: 0px;
+}
+.time-title{
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+  -webkit-box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+  -moz-box-shadow: -2px 1px 5px 0px rgba(99,99,99,0.75);
+}
+.time-title p{
+  padding: 10px 5px;
+  color: #E4E4E4;
+  margin: 0;
+}
+.time-title span{
+  padding: 10px 5px;
+  border-right: 1px solid #3CA1FE;
+}
+.cdk-drag-preview {
+  background-color: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+

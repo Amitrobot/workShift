@@ -1,0 +1,61 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="shifts">
+    <div class="shift-tabs">
+      <h4>MID Shifts</h4>
+      <h4>Day shifts</h4>
+      <h4>Eve shifts</h4>
+    </div>
+  </div>
+  <div cdkDropListGroup class="shifs-container">
+    <div class="shift-container" *ngFor="let items of workShift">
+      <div class="shft-board">
+        <div class="board-title">
+          <h4>{{ items.shiftName }} Shift</h4>
+          <b>{{ items.shift.length }}/{{ items.shift.length }}</b>
+        </div>
+      </div>
+      <div class="work-list" *ngFor="let eplshift of items.shift">
+        <div class="time-title">
+          <p
+            [ngClass]="{
+              day: items.shiftName === 'day',
+              mid: items.shiftName === 'mid',
+              eve: items.shiftName === 'eve'
+            }"
+          >
+            {{ eplshift.start }}
+          </p>
+          <span>{{ items.shift.length }}/{{ items.shift.length }}</span>
+        </div>
+        <div
+          cdkDropList
+          [cdkDropListData]="eplshift.empleyShift"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          <div
+            class="example-box"
+            *ngFor="let item of eplshift.empleyShift"
+            [ngClass]="{
+              day_border: items.shiftName === 'day',
+              mid_border: items.shiftName === 'mid',
+              eve_border: items.shiftName === 'eve'
+            }"
+            cdkDrag
+          >
+            <div class="card">
+              <div class="card-time">
+                <p>{{ item.start }}</p>
+                <p>{{ item.end }}</p>
+              </div>
+              <div class="card-time-zone">
+                <p>{{ item.timeZone }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
